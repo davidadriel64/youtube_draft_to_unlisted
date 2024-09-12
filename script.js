@@ -244,10 +244,10 @@
 
         async goToVisibility() {
             debugLog('going to Visibility');
-            await sleep(2500);
+            await sleep(3000);
             click(await this.visibilityStepper());
             const visibility = new VisibilityModal(this.raw);
-            await sleep(50);
+            await sleep(100);
             await waitForElement(VISIBILITY_PAPER_BUTTONS_SELECTOR, visibility.raw);
             return visibility;
         }
@@ -301,7 +301,7 @@
             await click(await draft.visibilityAd());
             await sleep(2500);
             await draft.checkAd();
-            await sleep(3500);
+            await sleep(5000);
             const visibility = await draft.goToVisibility();
             await sleep(1500);
             await visibility.setVisibility();
