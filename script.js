@@ -1,14 +1,47 @@
 (() => {
+    // -----------------------------------------------------------------
+    // CONFIG (you're safe to edit this)
+    // -----------------------------------------------------------------
+    // ~ GLOBAL CONFIG
+    // -----------------------------------------------------------------
     const MODE = 'publish_drafts'; // 'publish_drafts' / 'sort_playlist';
     const DEBUG_MODE = true; // true / false, enable for more context
+    // -----------------------------------------------------------------
+    // ~ PUBLISH CONFIG
+    // -----------------------------------------------------------------
     const MADE_FOR_KIDS = false; // true / false;
     const VISIBILITY = 'Unlisted'; // 'Public' / 'Private' / 'Unlisted'
-    
+    // -----------------------------------------------------------------
+    // ~ SORT PLAYLIST CONFIG
+    // -----------------------------------------------------------------
     const SORTING_KEY = (one, other) => {
         return one.name.localeCompare(other.name, undefined, {numeric: true, sensitivity: 'base'});
     };
+    // END OF CONFIG (not safe to edit stuff below)
+    // -----------------------------------------------------------------
 
-    
+    // Art by Joan G. Stark
+    // .'"'.        ___,,,___        .'``.
+    // : (\  `."'"```         ```"'"-'  /) ;
+    //  :  \                         `./  .'
+    //   `.                            :.'
+    //     /        _         _        \
+    //    |         0}       {0         |
+    //    |         /         \         |
+    //    |        /           \        |
+    //    |       /             \       |
+    //     \     |      .-.      |     /
+    //      `.   | . . /   \ . . |   .'
+    //        `-._\.'.(     ).'./_.-'
+    //            `\'  `._.'  '/'
+    //              `. --'-- .'
+    //                `-...-'
+
+
+
+    // ----------------------------------
+    // COMMON  STUFF
+    // ---------------------------------
     const TIMEOUT_STEP_MS = 20;
     const DEFAULT_ELEMENT_TIMEOUT_MS = 15500;
     function debugLog(...args) {
