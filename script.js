@@ -307,7 +307,7 @@
             await visibility.setVisibility();
             await sleep(1500);
             const dialog = await visibility.save();
-            await sleep(7500);
+            await sleep(9000);
         }
     }
 
